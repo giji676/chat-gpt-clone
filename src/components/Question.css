@@ -1,0 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.question-container {
+    background-color:  rgba(68,70,84,1);
+}
