@@ -23,6 +23,7 @@ function App() {
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }]
     });
+    console.log(result);
     setResults([...results, result]);
   }
 

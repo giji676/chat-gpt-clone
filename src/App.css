@@ -9,7 +9,7 @@ body {
 }
 
 .bottom-main {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   padding: 20px;
   box-sizing: border-box;

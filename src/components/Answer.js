@@ -11,8 +11,11 @@ function Answer(props) {
                 <img className="openAI-icon" src={OpenAIIcon} />
                 <p dangerouslySetInnerHTML={
                     {__html: (props.result.data.choices[0].message.content)
+                        .replace(/</g, "&lt")
+                        .replace(/>/g, "&gt")
                         .replace(/`{3}([^`]+)`{3}/g, '<br><span class="code">$1</span><br>')
-                        .replace(/`([^`]+)`/g, '`<span class="bolded">$1</span>`<br>')}
+                        .replace(/`([^`]+)`/g, '`<span class="bolded">$1</span>`')
+                    }
                     }>{}</p>
                 <div className="vote-container">
                     <img className="vote" src={LikeIcon} />
