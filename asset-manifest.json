@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/chat-gpt-clone/static/css/main.598995c2.css",
+    "main.js": "/chat-gpt-clone/static/js/main.4f4af85c.js",
+    "static/js/787.4b49e346.chunk.js": "/chat-gpt-clone/static/js/787.4b49e346.chunk.js",
+    "static/media/openAIIcon.svg": "/chat-gpt-clone/static/media/openAIIcon.1666bc94febac28c8e0779274f78dbe6.svg",
+    "static/media/submitIcon.svg": "/chat-gpt-clone/static/media/submitIcon.603321071de769c0be40924c8ff85467.svg",
+    "static/media/dislikeIcon.svg": "/chat-gpt-clone/static/media/dislikeIcon.4f6ab8df2b8c86662f82ef593ba72008.svg",
+    "static/media/likeIcon.svg": "/chat-gpt-clone/static/media/likeIcon.26bcac7a5b8927cc04713511c427b47d.svg",
+    "index.html": "/chat-gpt-clone/index.html",
+    "main.598995c2.css.map": "/chat-gpt-clone/static/css/main.598995c2.css.map",
+    "main.4f4af85c.js.map": "/chat-gpt-clone/static/js/main.4f4af85c.js.map",
+    "787.4b49e346.chunk.js.map": "/chat-gpt-clone/static/js/787.4b49e346.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.598995c2.css",
+    "static/js/main.4f4af85c.js"
+  ]
+}
