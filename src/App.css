@@ -13,7 +13,10 @@
 }
 
 .input-container {
+  position: absolute;
+  bottom: 0;
   padding: 10px;
+  box-sizing: border-box;
   width: 100%;
   background-color: rgba(64,65,79,1);
 }

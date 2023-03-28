@@ -1,7 +1,9 @@
 import './App.css';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Configuration, OpenAIApi } from "openai";
 import Question from "./components/Question.js"
+import Answer from "./components/Answer.js"
 
 function App() {
   const [prompt, setPrompt] = useState([]);
@@ -14,18 +16,21 @@ function App() {
 
   const callAPI = async (prompt) => {
     setPrompt([]);
+    setPrompts([...prompts, prompt]);
     const result = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }]
     });
-    setPrompts([...prompts, prompt]);
     setResults([...results, result]);
   }
 
   return (
     <div className="app">
-      {results.map((result, index) => (
-        <Question result={result} />
+      {prompts.map((prompt, index) => (
+        <React.Fragment key={index}>
+            <Question question={prompt} />
+            {results[index] && <Answer result={results[index]} />}
+        </React.Fragment>
       ))}
 
       {/* <p>test code <code className="code">print("test")</code> done</p> */}
@@ -35,7 +40,7 @@ function App() {
           value={prompt} 
           onChange={(e) => setPrompt(e.target.value)} 
         />
-        <button onClick={() => callAPI(prompt)} >test</button>
+        <button onClick={() => callAPI(prompt)}>Ask</button>
       </div>
     </div>
   );
