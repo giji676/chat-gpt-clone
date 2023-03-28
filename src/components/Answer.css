@@ -4,13 +4,12 @@
 }
 
 .answer-back {
-    background-color:  rgba(68,70,84,1);
+    background-color:  rgb(68,70,84);
     width: 100%;
 }
 
 .answer-container {
     padding: 20px;
-    background-color:  rgba(68,70,84,1);
     color: #d1d5db;
     display: flex;
     align-items: center;
@@ -44,3 +43,14 @@
     width: 20px;
     margin-left: 10px;
 }
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  border-radius: 3px;
+}
+.bolded { font-weight: bold; }

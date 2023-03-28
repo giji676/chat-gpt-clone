@@ -3,13 +3,32 @@
     margin: 0;
 }
 
-.question-container {
-    padding: 20px;
-    background-color:  rgba(52,53,65,1);
-    color: white;
+.question-back {
+    background-color:  rgb(52,53,65);
+    width: 100%;
 }
 
+.question-container {
+    padding: 20px;
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    width: 700px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.question-container .openAI-icon {
+    box-sizing: border-box;
+    width: 30px;
+    margin-right: 25px;
+    background-color: rgb(16, 85, 163);
+    padding: 4px;
+    border-radius: 2px;
+}
 
 .question-container p {
     word-wrap: break-word;
+    width: 100%;
 }

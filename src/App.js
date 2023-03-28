@@ -35,7 +35,6 @@ function App() {
         </React.Fragment>
       ))}
 
-      {/* <p>test code <code className="code">print("test")</code> done</p> */}
       <div className="bottom-main">
         <div className="input-container">
           <input 
