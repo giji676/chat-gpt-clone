@@ -2,8 +2,9 @@ import './App.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Configuration, OpenAIApi } from "openai";
-import Question from "./components/Question.js"
-import Answer from "./components/Answer.js"
+import Question from "./components/Question.js";
+import Answer from "./components/Answer.js";
+import SubmitSVG from "./images/submitIcon.svg";
 
 function App() {
   const [prompt, setPrompt] = useState([]);
@@ -15,6 +16,7 @@ function App() {
   }))
 
   const callAPI = async (prompt) => {
+    if (prompt == "") return;
     setPrompt([]);
     setPrompts([...prompts, prompt]);
     const result = await openai.createChatCompletion({
@@ -34,13 +36,20 @@ function App() {
       ))}
 
       {/* <p>test code <code className="code">print("test")</code> done</p> */}
-      <div className="input-container">
-        <input 
-          type="text" 
-          value={prompt} 
-          onChange={(e) => setPrompt(e.target.value)} 
-        />
-        <button onClick={() => callAPI(prompt)}>Ask</button>
+      <div className="bottom-main">
+        <div className="input-container">
+          <input 
+            type="text" 
+            value={prompt} 
+            onChange={(e) => setPrompt(e.target.value)} 
+          />
+          <img 
+            src={SubmitSVG}
+            alt="submit"
+            onClick={() => callAPI(prompt)}
+          />
+        </div>
+        <p>This is a chat gpt clone utilising the <a href="https://platform.openai.com/docs/api-reference">openAI</a> API.</p>
       </div>
     </div>
   );

@@ -6,4 +6,10 @@
 .question-container {
     padding: 20px;
     background-color:  rgba(52,53,65,1);
+    color: white;
+}
+
+
+.question-container p {
+    word-wrap: break-word;
 }
